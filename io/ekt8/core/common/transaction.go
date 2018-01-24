@@ -1,19 +1,19 @@
-package transaction
+package common
 
 import (
 	"strings"
 
-	"../"
+	"./"
 )
 
 type Transactions []*Transaction
 
 type Transaction struct {
-	From      common.Address
-	To        common.Address
-	TimeStamp common.Time // UnixTimeStamp
+	From      Address
+	To        Address
+	TimeStamp Time // UnixTimeStamp
 	Amount    int64
-	Type      common.CoinType
+	Type      CoinType
 	Nonce     int64
 	Sign      string
 }

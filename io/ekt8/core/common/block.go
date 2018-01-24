@@ -1,19 +1,17 @@
-package block
+package common
 
 import (
 	"fmt"
 	"sort"
 
-	"../"
-	"../transaction"
 	"golang.org/x/crypto/sha3"
 )
 
 type Block struct {
 	Height       int64
-	PreviousHash common.Hash
-	CurrentHash  common.Hash
-	Transactions transaction.Transactions
+	PreviousHash Hash
+	CurrentHash  Hash
+	Transactions Transactions
 }
 
 func (block *Block) sort() {

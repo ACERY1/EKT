@@ -1,10 +1,6 @@
 package main
 
-import (
-	"./db"
-	"math/rand"
-	"time"
-)
+import ()
 
 func main() {
 }
