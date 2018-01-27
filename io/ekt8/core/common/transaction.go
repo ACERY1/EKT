@@ -1,9 +1,10 @@
 package common
 
 import (
+	"encoding/json"
+	"fmt"
+	"sort"
 	"strings"
-
-	"./"
 )
 
 type Transactions []*Transaction
@@ -31,5 +32,8 @@ func (transactions Transactions) Swap(i, j int) {
 }
 
 func (transactions Transactions) Hash() string {
+	sort.Sort(transactions)
+	bytes, _ := json.Marshal(transactions)
+	fmt.Println(string(bytes))
 	return ""
 }

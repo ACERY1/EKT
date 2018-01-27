@@ -1,14 +1,13 @@
-package account
+package common
 
 import (
 	"bytes"
 
-	"../../crypto"
-	"../common"
+	"github.com/EducationEKT/EKT/io/ekt8/crypto"
 )
 
 type Account struct {
-	Address    common.Address
+	Address    Address
 	PublickKey crypto.PublicKey
 }
 
